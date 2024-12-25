@@ -9,12 +9,12 @@ let cities = [
   "Tokyo",
   "Moscow",
 ];
-for (city of cities) {
-  let fragment = new DocumentFragment();
+let fragment = new DocumentFragment();
+for (let city of cities) {
   let theCity = document.createElement("li");
   theCity.setAttribute("class", "city");
   theCity.innerText = city;
-  orderedList.appendChild(theCity);
-  fragment.appendChild(orderedList);
-  mainSection.appendChild(fragment);
+  fragment.appendChild(theCity);
 }
+orderedList.appendChild(fragment);
+mainSection.appendChild(orderedList);
